@@ -131,14 +131,14 @@ def crea_esercito_giocatore(budget):
     i = 1
     while budget >= 120: #costo più basso possibile per i tipi di soldati (Arciere e Guaritore costano 120, gli altri di più)
         nome = (input(f"Inserisci il nome del soldato {i}: "))
-        tipo = int(input("Inserisci il tipo di soldato:\n1 per Cavaliere (200 monete)\n2 per Arciere (120 monete)\n3 per Guaritore (120 monete)\n4 per Mago (180 monete): "))
-        if tipo == 1: 
+        tipo = input("Inserisci il tipo di soldato:\n1 per Cavaliere (200 monete)\n2 per Arciere (120 monete)\n3 per Guaritore (120 monete)\n4 per Mago (180 monete): ")
+        if tipo == "1": 
             soldato = Cavaliere(nome)
-        elif tipo == 2:
+        elif tipo == "2":
             soldato = Arciere(nome)
-        elif tipo == 3:
+        elif tipo == "3":
             soldato = Guaritore(nome)
-        elif tipo == 4:
+        elif tipo == "4":
             soldato = Mago(nome)
         else:
             print("Inserire un numero da 1 a 4 per scegliere il tipo di soldato!")
